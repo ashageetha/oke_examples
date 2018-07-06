@@ -26,9 +26,7 @@ push-release:
         
 #delete any existing Wercker secret before creating, to accommodate secret changes
 inject-secret:
-    box:
-        id: alpine
-        cmd: /bin/sh
+    
     steps:
     
     - kubectl:
@@ -46,9 +44,7 @@ inject-secret:
         command: create secret docker-registry wercker --docker-server=$DOCKER_REGISTRY --docker-username=$DOCKER_USERNAME --docker-password=$DOCKER_PASSWORD --docker-email=$DOCKER_EMAIL; echo create registry secret
 
 deploy-to-cluster:
-    box:
-        id: alpine
-        cmd: /bin/sh
+    
     steps:
 
     - bash-template

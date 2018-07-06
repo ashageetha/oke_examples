@@ -39,7 +39,7 @@ inject-secret:
         command: delete secret wercker; echo delete registry secret
         
     - kubectl:
-        name: create secret
+        name: create secret for pull image
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true

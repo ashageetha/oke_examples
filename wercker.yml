@@ -32,7 +32,7 @@ inject-secret:
     steps:
     
     - kubectl:
-        name: delete secret
+        name: delete secret from Kubernetes Cluster
         server: $KUBERNETES_MASTER
         token: $KUBERNETES_TOKEN
         insecure-skip-tls-verify: true
